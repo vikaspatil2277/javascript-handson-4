@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+    <style>
+        pre{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <center><h1>Arrays</h1></center>
+
+    <h3>Q1. Find the Product.</h3>
+    <p>Write a program that takes an array as input from the user and find out the product of the elements.</p>
+    <pre>
+                
+const Find_Prod = (array, N) => 
+{
+ let product = 1;
+for(let i=0; i< N; i++) {
+product = product * array[i];
+}
+return product;
+
+
+};
+    </pre>
+
+    <h3>Q2. Find the sum.</h3> 
+    <p>Write a program which takes an array as input from the user and find out the sum of the array elements.</p>
+      <pre>
+        
+const Find_Sum = (array, N) => 
+{
+  let sum =0;
+   for(let i=0; i< N; i++) {
+    sum= sum+array[i];
+  }
+  return sum;
+
+};
+
+      </pre>
+
+ <h3>Q3. Count Occurrences</h3>
+      <p> You are given an array 
+        A
+         containing 
+        N
+         integer elements and an integer 
+        K
+        , and your task is to return the count of occurrences of 
+        K
+         in array 
+        A
+        .</p>
+        <pre>
+            
+const findCount = (N, K, Arr) => 
+{
+  let num=0;
+  for(let i=0; i< N; i++){
+    if (K == Arr[i])
+    num++;
+  }
+    return num;
+};
+        </pre>
+<h3>Q4. Even Odd</h3>
+<p>You are given an array 
+    A
+     containing 
+    N
+     integer elements, and your task is to return an array 
+    B
+     
+    (
+    having a size equal to 
+    2
+    )
+    , where 
+    B
+    [
+    0
+    ]
+     contains the sum of all even elements of array A and 
+    B
+    [
+    1
+    ]
+     has the sum of all odd elements of the array 
+    A
+    .</p>
+    <pre>
+        
+const findEvenOdd = (N, Arr) => 
+{
+   let even=0;
+    let odd=0;
+   for (let i=0; i< N; i++){
+     if(Arr[i]%2===0){
+       even+=Arr[i];
+     }
+     else{
+       odd+=Arr[i];
+     }
+   }
+   return [even,odd];
+};
+    </pre>
+
+    <h3>Q5. Find whether the number is present or not </h3>
+    <p>Write a program which takes an array as input from the user and a number.
+        Check whether the number is present or not</p>
+        <pre>
+           
+const Find_Num = (array,N,M) => 
+{
+  for (let i=0;i< N;i++){
+    if(array[i]==M){
+      return "YES";
+    }
+  }
+    return "NO";
+  
+  
+}; 
+        </pre>
+
+        <h3>Q6. Higher Age</h3>
+        <p>You are given an array 
+            A
+             containing the age of persons in your locality, and your task is to find and return an array containing the age of persons that are over 
+            18
+             
+            (
+            18
+             included
+            )
+            .</p>
+            <pre>
+                
+const highAge = (N, Arr) => 
+{
+  let age=[];
+  for(let i=0; i<N; i++){
+    if(Arr[i]>=18){
+      age.push(Arr[i]);
+    }
+    }
+     return age;
+    
+};
+            </pre>
+
+<h3>Q7. Increment the Array Elements</h3>
+     <p>You are provided an array of integers and you have to increment all array elements by 1 and then print whole array.
+
+      You have to complete Inc_Arr. No need to take any input.</p>
+ <pre>
+                   
+const Inc_Arr = (array,N) => 
+{
+  for(let i=0; i< N; i++){
+    console.log(array[i]+1)
+  }
+
+}; 
+                </pre>
+          
+      <h3>Q8. Pass or Fail</h3>
+      <p>You are given an array 
+        A
+         containing the maths marks of students in your class, and your task is to determine if all the students pass in your class or not. A student is declared pass if his maths marks are greater than or equal to 
+        32
+        .
+        
+        If all the students pass in your class, return "YES" (without quotes); otherwise, return "NO" (without quotes)</p>
+
+        <pre>
+            
+const isAllPass = (N, Arr) => 
+{
+  for (i=0;i< N; i++){
+    if(Arr[i]< 32){
+    return "NO";
+  }
+  
+}
+    return "YES";
+};
+        </pre>
+
+        <h3>Q9. Min and Max</h3>
+        <p>
+            Congratulations on making up to this question. Let us give you a fairly simple array problem to solve. If you know how to iterate through the array, you will easily be able to solve this.
+The problem statement is simple- given 
+N
+ elements, find the minimum and maximum numbers among those elements. </p>
+
+ <pre>
+     
+ function arrayMin(arr) {
+    let minimum = arr[0];
+    for (let i=1; i< arr.length; i++){
+      if(arr[i]<minimum){
+        minimum = arr[i];
+      }
+    }
+  return minimum;
+  }
+  
+  function arrayMax(arr) {
+   let maximum=arr[0];
+    for (let i=1; i< arr.length; i++){
+      if(arr[i]>maximum){
+        maximum=arr[i];
+      }
+    }
+  return maximum;
+  
+  }
+ </pre>
+</body>
+</html>
